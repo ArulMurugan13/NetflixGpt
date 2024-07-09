@@ -15,9 +15,13 @@
 11. create sign in 
 12. created store and provide to app
 13. created user slice and add to store
-14. on Auth change  state for maintaining sign in
+14. on Auth change  state for maintaining sign in - like event listner
 15. on signin navigate to browse
 16. signout option user become null and to home page
+17. Bug fixed - navigate changed to body auth state - once logged in can't able to go to  
+    login page until log out and vice versa 
+18. Bug - if auth state useffect will call when component render - use unsubcribe return   to unmount component
+19. Bug - whenener use string , use it from constants - 
 
 
 

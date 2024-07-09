@@ -8,20 +8,20 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import Footer from '../components/Footer'
 
 
 const Login = () => {
 
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
     const [isSignIn , setisSignIn] = useState(true);
     const [errorMsg , seterrorMsg] = useState(null);
 
     const handleSignInToggle = ()=>{
+        seterrorMsg(null);
         setisSignIn(!isSignIn);
     }
 
@@ -56,24 +56,20 @@ const Login = () => {
                 dispatch(
                   addUser({ uid: uid, email: email, displayName: displayName })
                 );
-                navigate("/browse");
               })
               .catch((error) => {
-              });
-            console.log(user);
-            
+              }); 
           })
           .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-            seterrorMsg(errorMessage);
+            seterrorMsg(errorCode + "-" + errorMessage);
           });
 
 
       }
       else{
         // for sign in
-
         signInWithEmailAndPassword(
           auth,
           userEmail.current.value,
@@ -82,14 +78,11 @@ const Login = () => {
           .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
-            navigate("/browse");
-            console.log(user)
-            // ...
           })
           .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-            seterrorMsg(errorMessage)
+            seterrorMsg(errorCode +"-"+ errorMessage);
           });
 
       }
@@ -99,15 +92,6 @@ const Login = () => {
   return (
     <div className="">
       <Header />
-
-      {/* Background image */}
-      <div className=" ">
-        <img
-          className="absolute"
-          alt="Bg-Image"
-          src={bgImage}
-        />
-      </div>
 
       {/* sign Up form */}
       <form
@@ -156,6 +140,11 @@ const Login = () => {
           </span>
         </p>
       </form>
+      {/* Background image */}
+      <div className=" ">
+        <img className=" h-screen w-screen" alt="Bg-Image" src={bgImage} />
+      </div>
+      <Footer/>
     </div>
   );
 };
