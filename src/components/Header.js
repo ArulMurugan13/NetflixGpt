@@ -27,7 +27,7 @@ const Header = () => {
     <div className="absolute w-full z-50 flex  px-12 items-center  justify-between  bg-gradient-to-b from-black">
       <div>
         <img
-          className="ml-12 w-[9.5rem] h-[4.5rem]"
+          className="ml-12 w-[7.5rem] h-[3.5rem]"
           alt="logo"
           src={Netflix_Logo}
         />
