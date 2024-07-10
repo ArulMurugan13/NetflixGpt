@@ -2,8 +2,8 @@ import React from 'react'
 
 const VideoTitle = ({title ,overview}) => {
   return (
-    <div className="w-full aspect-video bg-gradient-to-r from-black text-white ">
-      <div className="ml-5  pt-52">
+    <div className="absolute w-full aspect-video bg-gradient-to-r from-gray-950 text-white ">
+      <div className="ml-9  pt-[20%]">
         <h1 className="font-bold text-4xl mb-8">{title}</h1>
         <p className="font-medium  w-1/3 text-sm mb-4">{overview}</p>
       </div>
