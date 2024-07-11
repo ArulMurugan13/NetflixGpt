@@ -10,3 +10,6 @@ export const OPTION_API = {
       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlODYyNTY4MTE4ZGVmZjRiNDk5NGRmYjkyZGE0MGIzYSIsIm5iZiI6MTcyMDUyNDIyNC4yODIyMywic3ViIjoiNjY4ZDAyYzg5NmRlMWFiZWY0YjJlMjljIiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.aVPuKt8WzidvUXNrja_Q1d-8guaeRbtZj9lLwP3rgvs",
   },
 };
+
+export const POSTER_API =
+  "https://image.tmdb.org/t/p/w780";

@@ -17,7 +17,7 @@ import { useEffect } from "react";
         );
         const trailer = filterData?.length ? filterData[0] : json?.results?.[0];
         dispatch(addMovieTrailer(trailer));
-        console.log(trailer);
+
       };
 
       useEffect(() => {

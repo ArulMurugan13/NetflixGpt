@@ -22,6 +22,9 @@
     login page until log out and vice versa 
 18. Bug - if auth state useffect will call when component render - use unsubcribe return   to unmount component
 19. Bug - whenener use string , use it from constants - 
+20. Added Main container - video title , overview
+21. made bg video - autoplay=1 & mute=1 
+22. Added sec container with movies container and series container - movie card
 
 
 

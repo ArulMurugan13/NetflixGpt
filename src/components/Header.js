@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { signOut } from 'firebase/auth';
 import { auth } from '../utils/firebase';
 import { useNavigate } from 'react-router-dom';
+import signout from '../Images/signout.png'
 
 
 const Header = () => {
@@ -35,14 +36,15 @@ const Header = () => {
       {user && (
         <div className="flex items-center">
           <img src={userLogo} alt="user logo" className="w-6 h-6 rounded-l" />
-          <p className="bg-black px-[5px] rounded-r text-white">
+          <p className="bg-gray-600 px-[8px] rounded-r text-white">
             {user.displayName}
           </p>
           <button
-            className="bg-red-600 px-[5px] rounded text-white ml-20"
+            className=" flex items-center gap-2 bg-red-600 px-[5px] rounded text-white ml-10"
             onClick={handleSignout}
           >
             Sign Out
+            <img className="w-4 h-4" alt="more info" src={signout} />
           </button>
         </div>
       )}

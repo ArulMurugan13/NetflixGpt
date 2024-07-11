@@ -6,12 +6,13 @@ import useMovieTrailer from '../utils/useMovieTrailer';
 const BgVideo = ({movieId}) => {
 
   useMovieTrailer(movieId);
+  
   const trailerData = useSelector(store => store?.movies?.movieTrailer)
 
   return (
-    <div className="w-full">
+    <div className="w-full  ">
       <iframe
-        className=" w-full aspect-video"
+        className=" w-full aspect-video "
         src={
           "https://www.youtube.com/embed/" +
           trailerData?.key +
