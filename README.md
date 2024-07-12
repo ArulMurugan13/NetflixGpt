@@ -26,6 +26,16 @@
 21. made bg video - autoplay=1 & mute=1 
 22. Added sec container with movies container and series container - movie card
 
+# Gpt Search Page
+
+1. Created search bar 
+2. Created Api Secret key
+3. installed openAi - npm install openai
+4. Add openai config 
+
+
+
+
 
 
 # Features

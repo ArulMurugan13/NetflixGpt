@@ -14,8 +14,7 @@ const usePopularSeries = () => {
     const data = await fetch(url, OPTION_API);
 
     const json = await data.json();
-    console.log(json);
-
+    
     //updating the  store
     dispatch(addPopularSeries(json?.results));
   };

@@ -13,3 +13,6 @@ export const OPTION_API = {
 
 export const POSTER_API =
   "https://image.tmdb.org/t/p/w780";
+
+
+// open ai
