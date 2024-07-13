@@ -1,9 +1,11 @@
 import { useEffect } from "react";
 import { OPTION_API } from "./constant";
-import { useDispatch } from "react-redux";
-import { addPopularMovies, addUpcomingMovies } from "./movieSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { addUpcomingMovies } from "./movieSlice";
 
 const useUpcomingMovies = () => {
+
+  const upcomingMovies = useSelector(store => store.movies.upcomingMovies)
   const dispatch = useDispatch();
 
   //fetching now playing movies from TMDB
@@ -20,7 +22,7 @@ const useUpcomingMovies = () => {
   };
 
   useEffect(() => {
-    getUpcomingMovies();
+    if(!upcomingMovies)  getUpcomingMovies();
   }, []);
 };
 

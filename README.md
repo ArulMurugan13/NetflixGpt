@@ -25,6 +25,8 @@
 20. Added Main container - video title , overview
 21. made bg video - autoplay=1 & mute=1 
 22. Added sec container with movies container and series container - movie card
+23. Memoization for better performance - reducing api calls when changing pages
+
 
 # Gpt Search Page
 
@@ -32,6 +34,11 @@
 2. Created Api Secret key
 3. installed openAi - npm install openai
 4. Add openai config 
+5. Query to get suggestion
+6. resulted mag to array 
+7. api call for every suggestion and map - promise.all for waiting all api promise   call  to complete
+8. Suggestion  page
+
 
 
 

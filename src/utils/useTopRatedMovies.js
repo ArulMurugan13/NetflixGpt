@@ -1,10 +1,12 @@
 import { useEffect } from "react";
 import { OPTION_API } from "./constant";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addTopRatedMovies } from "./movieSlice";
 
 
 const useTopRatedMovies = () => {
+
+    const topRatedMovies = useSelector(store => store.movies.topRatedMovies);
   const dispatch = useDispatch();
 
   //fetching now playing movies from TMDB
@@ -22,7 +24,7 @@ const useTopRatedMovies = () => {
   };
 
   useEffect(() => {
-    getTopRatedMovies();
+    if(!topRatedMovies) getTopRatedMovies();
   }, []);
 };
 

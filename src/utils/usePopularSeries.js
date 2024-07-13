@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { OPTION_API } from "./constant";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {  addPopularSeries } from "./movieSlice";
 
 const usePopularSeries = () => {
+  const popularSeries = useSelector(store => store.movies.popularSeries)
   const dispatch = useDispatch();
 
   //fetching now playing movies from TMDB
@@ -20,7 +21,7 @@ const usePopularSeries = () => {
   };
 
   useEffect(() => {
-    getPopularSeries();
+    if(!popularSeries) getPopularSeries();
   }, []);
 };
 
